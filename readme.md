@@ -15,7 +15,7 @@ liburdfdom
 catkin
 velodyne_description
 gazebo_plugins
-
+map_server
 
 #### Installing
 
@@ -26,7 +26,23 @@ Downloading the package directly from github should provide all necessary compon
 
 Execute the program by invoking the launch file:
 
-roslaunch navvis_deisplay display.launch
+roslaunch navvis_description display.launch
+
+Params:
+
+	use_sim_time default set to false, whether or not to use clock while running map simulation
+
+	use_xacro default set to true, whether or not to use xacro or urdf file for robot model
+
+	use_joint_state_publisher_gui default set to true, whether or not to use joint state gui
+
+	use_robot_state_publisher set totrue, whether or not to use robot state publisher
+	
+	file 				name of file to use (set to robot.urdf or robot.xacro)
+	
+	filename 			full path of file to use
+	
+Purpose of launch file: Creates base configuration for robot and can be used by laboratory 3 via "include" to bring in the model for simulation.
 
 
 #### Authors
