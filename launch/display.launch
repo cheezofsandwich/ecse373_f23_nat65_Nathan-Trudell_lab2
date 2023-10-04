@@ -15,6 +15,9 @@
 	<param unless="$(arg use_xacro)" name="robot_description" textfile="$(arg file)" />
 	
 	
+	<arg name="use_sim_time" default="false"/>
+	<param name="use_sim_time" value ="$(arg use_sim_time)"/>
+	
 	
 	<!-- Create an argument to determine whether to use joint_state_publisher or joint_state_publisher_gui -->
 	<arg name="use_joint_state_publisher_gui" default ="true" />
